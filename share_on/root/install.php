@@ -1,10 +1,10 @@
 <?php
 
 /**
-* @author _Vinny_ vinny@suportephpbb.com.br
-* @package Share On
+* @author Saske admin@phpbbsaske.es
+* @package Index Tabbed
 * @version $Id install.php
-* @copyright (c) 2012 _Vinny_ ( http://www.suportephpbb.com.br ), Saske1 ( http://www.phpbb-es.com )
+* @copyright (c) 2013 Saske1 ( http://www.phpbbsaske.es )
 * @license http://opensource.org/licenses/gpl-license.php GNU Public License
 *
 */
@@ -30,66 +30,33 @@ if (!file_exists($phpbb_root_path . 'umil/umil_auto.' . $phpEx))
 $language_file = 'mods/info_acp_shareon';
 
 // The name of the mod to be displayed during installation.
-$mod_name = 'SO_ACP';
+$mod_name = 'SHAREON_TITLE';
 
 $version_config_name = 'shareon_version';
 
 $versions = array(
-   // Version 1.2.0
-   '1.2.0'   => array(
+   // Version 3.0.0
+   '3.0.0'   => array(
       // Lets add a config setting
       'config_add' => array(
-         array('so_status', true),
-		 array('so_facebook', true),
-		 array('so_twitter', true),
-		 array('so_tuenti', true),
-		 array('so_sonico', true),
-		 array('so_friendfeed', true),
-		 array('so_orkut', true),
-		 array('so_digg', true),
-		 array('so_myspace', true),
-		 array('so_delicious', true),
-		 array('so_technorati', true),
+         array('shareon_index', true),
+		 array('shareon_forum', true),
+		 array('shareon_topic', true),
 		),
 	  
 	  // Now add the module
 		'module_add' => array(
 			// First, lets add a new category named SO_ACP to ACP_CAT_DOT_MODS
-			array('acp', 'ACP_CAT_DOT_MODS', 'SO_ACP'),
+			array('acp', 'ACP_CAT_DOT_MODS', 'SHAREON_TITLE'),
 			// next let's add our module
-			array('acp', 'SO_ACP', array(
+			array('acp', 'SHAREON_TITLE', array(
 					'module_basename'	=> 'shareon',
-					'modes'				=> array('settings'),
+					),
 				),
 			),
+		'cache_purge' => array('', 'template', 'theme'),
 		),
-	),
-   
-   	// Version 2.0.0
-	'2.0.0' => array(
-		// Nothing changed in this version.
-	),
-
-	// Version 2.0.1
-	'2.0.1' => array(
-	// Lets add a config setting
-	'config_add' => array(
-		array('so_tumblr', true),
-		),
-	),
-
-	// Version 2.1.0
-	'2.1.0' => array(
-	// Lets add a config setting
-	'config_add' => array(
-		array('so_google', true),
-		array('so_position', true),
-		),
-
-	'cache_purge' => array('', 'template', 'theme'),
-	),
-	
-);
+	);
 
 // Include the UMIF Auto file and everything else will be handled automatically.
 include($phpbb_root_path . 'umil/umil_auto.' . $phpEx);

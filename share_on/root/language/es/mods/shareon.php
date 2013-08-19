@@ -38,19 +38,10 @@ if (empty($lang) || !is_array($lang))
 // in a url you again do not need to specify an order e.g., 'Click %sHERE%s' is fine
 
 $lang = array_merge($lang, array(
-	'ACP_SHAREON_TITLE'	=>	'Share On',
-	'SHAREON_TITLE'		=>	'Share On',
-	'SHAREON_EXPLAIN'		=>	'Este MOD te permite compartir los enlaces de tu foro en la redes sociales!',
-	'SHAREON_CONFIG'		=>	'Configuración General',
-	'SHAREON_INDEX'		=>	'Activar Share On en el indice',
-	'SHAREON_INDEX_EXPLAIN'		=>	'Habilitar o deshabilitar los iconos en el índice del foro',
-	'SHAREON_FORUM'		=>	'Activar Share On en el foro',
-	'SHAREON_FORUM_EXPLAIN'		=>	'Habilitar o deshabilitar los iconos viendo un foro',
-	'SHAREON_TOPIC'		=>	'Activar Share On en el tema',
-	'SHAREON_TOPIC_EXPLAIN'		=>	'Habilitar o deshabilitar los iconos viendo un tema',
-	'SHAREON_VERSION_OLD'		=>	'Versión Actual del MOD:',
-	'SHAREON_VERSION_NEW'		=>	'Versión mas reciente del MOD:',
-	'SHAREON_SAVED'				=> 'Configuración Actualizada',
+	'SHAREON'		=>	'Share On',
+	'SHAREON_FACEBOOK'		=>	'Facebook',
+	'SHAREON_TWITTER'		=>	'Twitter',
+	'SHAREON_GOOGLE'		=>	'Google +',
 
 ));
 
